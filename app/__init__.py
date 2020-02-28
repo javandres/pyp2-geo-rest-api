@@ -4,7 +4,7 @@ Example RESTful API Server.
 """
 from flask import Flask
 from flask_restplus import Resource, Api
-
+from flask_cors import CORS, cross_origin
 
 api_v1 = Api(
     version='1.0',
@@ -21,6 +21,9 @@ def create_app(flask_config_name=None, **kwargs):
 
     # Initialize the Flask-App
     app = Flask(__name__, **kwargs)
+
+    # Enable CORS
+    cors = CORS(app)
 
     # Load the config file
     app.config.from_object('config.DevelopmentConfig')
