@@ -1,7 +1,8 @@
 class BaseConfig(object):
     ENABLED_MODULES = {
         'api',
-        'geoapi'
+        'geoapi',
+        'pyp2'
     }
     SWAGGER_UI_JSONEDITOR = True
 

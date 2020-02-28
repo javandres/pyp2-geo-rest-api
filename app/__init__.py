@@ -8,9 +8,9 @@ from flask_restplus import Resource, Api
 
 api_v1 = Api(
     version='1.0',
-    title="FLASK | FLASK-RESTPlus GeoAPI",
+    title="LlactaLab | REST GeoAPI",
     description=(
-        "This is a FLASK-RESPlus powered API with geospatial super power.\n\n"
+        "This is a Geospatial REST API.\n\n"
     ),
 )
 
