@@ -74,11 +74,11 @@ class Isochrone(Resource):
             'cutoffSec': contours[0]["time"]*60,
             'locale':'es'
         }
-
+        otpurl = 'http://201.159.223.152/otp/routers/default'
         #http://localhost:8080/otp/routers/default/plan?fromPlace=-2.8878374918762115%2C-79.02036666870117&toPlace=-2.902581526675543%2C-79.00766372680663&time=5%3A48pm&date=04-26-2020&mode=BICYCLE&maxWalkDistance=804.672&arriveBy=false&wheelchair=false&optimize=TRIANGLE&triangleTimeFactor=0.38271604938271603&triangleSlopeFactor=0.26336672107399556&triangleSafetyFactor=0.35391722954328847&locale=en
         print(params)
         r = requests.get(
-            'http://localhost:8080/otp/routers/default/isochrone',
+            otpurl+'/isochrone',
             params=params)
         return r.json()
 
